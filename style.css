@@ -110,13 +110,15 @@ p.info {
 
 /* === MAPA === */
 #map {
-  height: 500px;
   width: 100%;
-  max-width: 1280px;
+  max-width: 500px;
+  aspect-ratio: 1 / 1; /* sempre quadrado */
   border-radius: 0.5rem;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
   border: 1px solid #d1d5db;
   transition: border-color 0.3s ease;
+  margin: 0 auto; /* centraliza */
+  margin-bottom: 2%;
 }
 
 /* === MODO ESCURO === */
@@ -168,7 +170,7 @@ body.dark #map {
   }
 
   #map {
-    height: 400px;
+    max-width: 360px; /* menor no tablet */
   }
 }
 
@@ -198,6 +200,6 @@ body.dark #map {
   }
 
   #map {
-    height: 300px;
+    max-width: 280px; /* menor ainda no celular */
   }
 }
