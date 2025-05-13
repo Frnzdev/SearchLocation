@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Mapa com Busca (Google)</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body id="body">
+    <header>
+      <div class="logo-container">
+        <img
+          src="Logo_Churrascaria_Restaurante_-removebg-preview 1.png"
+          alt="Logo da Churrascaria"
+        />
+      </div>
+      <div class="modo-noturno-btn">
+        <button onclick="toggleDarkMode()">
+          <img
+            src="moon-svgrepo-com.svg"
+            alt="Modo Noturno"
+            class="modo-moon-btn"
+          />
+          <img
+            src="sun-svgrepo-com.svg"
+            alt="Modo Claro"
+            class="modo-sun-btn"
+            style="display: none"
+          />
+        </button>
+      </div>
+    </header>
+
+    <div class="container">
+      <h1>Encontre a Melhor Churrascaria Perto de Você</h1>
+
+      <p>
+        Procurando uma churrascaria deliciosa para o seu almoço ou jantar?
+        <strong>Nosso aplicativo</strong> facilita a busca pelas melhores opções
+        de churrascarias na sua região.
+      </p>
+
+      <p>
+        Com nossa ferramenta de pesquisa, você pode filtrar por localização,
+        avaliações e até opções de pratos especiais.
+      </p>
+    </div>
+
+    <input id="searchBox" type="text" placeholder="Churrascaria..." />
+
+    <p class="info">Você deve clicar no endereço sugerido</p>
+
+    <div id="map"></div>
+
+    <div id="text"></div>
+
+    <script src="mapa.js"></script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC51aIHOsExwEJPUqIfvOT99xJzOuyJ1fM&libraries=places&callback=initMap"
+      async
+      defer
+    ></script>
+  </body>
+</html>

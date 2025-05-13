@@ -1,0 +1,203 @@
+/* === ESTILO GERAL (MODO CLARO) === */
+body {
+  background-color: #f3f4f6;
+  color: #1f2937;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  font-family: "Segoe UI", sans-serif;
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* === CABEÇALHO === */
+header {
+  width: 100%;
+  background-color: rgb(253, 189, 71);
+  backdrop-filter: blur(8px);
+  margin-bottom: 1.25rem;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  position: relative;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* === LOGO === */
+.logo-container {
+  display: flex;
+  justify-content: center;
+  padding: 1rem 0;
+}
+
+/* === BOTÃO DE MODO NOTURNO === */
+.modo-noturno-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.modo-noturno-btn button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.25rem;
+  transition: transform 0.2s ease;
+}
+
+.modo-noturno-btn button:hover {
+  transform: scale(1.1);
+}
+
+.modo-noturno-btn img {
+  width: 24px;
+  height: 24px;
+  filter: brightness(0.8);
+}
+
+/* === CONTEÚDO PRINCIPAL === */
+.container {
+  max-width: 960px;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.25rem;
+  font-weight: bold;
+  color: #1f2937;
+  margin-bottom: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+p {
+  font-size: 1.125rem;
+  color: #374151;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  transition: color 0.3s ease;
+}
+
+/* === CAMPO DE BUSCA === */
+input#searchBox {
+  border: 1px solid #cbd5e1;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem;
+  width: 100%;
+  max-width: 32rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  font-size: 1rem;
+  transition: background-color 0.3s ease, color 0.3s ease,
+    border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input#searchBox:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.5);
+  outline: none;
+}
+
+/* === TEXTO INFORMATIVO === */
+p.info {
+  font-size: 1rem;
+  color: #6b7280;
+  margin-bottom: 1rem;
+  transition: color 0.3s ease;
+}
+
+/* === MAPA === */
+#map {
+  height: 500px;
+  width: 100%;
+  max-width: 1280px;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  border: 1px solid #d1d5db;
+  transition: border-color 0.3s ease;
+}
+
+/* === MODO ESCURO === */
+body.dark {
+  background-color: #0f172a;
+  color: #f9fafb;
+}
+
+body.dark h1,
+body.dark p,
+body.dark p.info {
+  color: #f9fafb;
+}
+
+body.dark input#searchBox {
+  background-color: #1e293b;
+  color: #f9fafb;
+  border-color: #334155;
+}
+
+body.dark input#searchBox:focus {
+  box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.5);
+}
+
+body.dark #map {
+  border-color: #334155;
+}
+
+/* === RESPONSIVIDADE === */
+
+/* Ajuste para tablets e celulares grandes */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.75rem;
+  }
+
+  p,
+  p.info {
+    font-size: 1rem;
+  }
+
+  .container {
+    padding: 1.5rem 1rem;
+  }
+
+  input#searchBox {
+    font-size: 0.95rem;
+    padding: 0.6rem 0.9rem;
+  }
+
+  #map {
+    height: 400px;
+  }
+}
+
+/* Ajuste para celulares pequenos */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .modo-noturno-btn {
+    top: 5px;
+    right: 5px;
+  }
+
+  .modo-noturno-btn img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .container {
+    padding: 1rem 0.5rem;
+  }
+
+  input#searchBox {
+    font-size: 0.875rem;
+    padding: 0.5rem 0.8rem;
+  }
+
+  #map {
+    height: 300px;
+  }
+}
